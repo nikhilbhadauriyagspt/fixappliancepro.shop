@@ -111,7 +111,7 @@ const ServicePageLayout = ({
                   </div>
                   <div>
                     <p className="text-slate-400 text-[10px] font-extrabold uppercase tracking-[0.2em] mb-2">Response Time</p>
-                    <p className="text-lg font-extrabold text-[#0b1220]">Under 120 Mins</p>
+                    <p className="text-lg font-extrabold text-[#0b1220]">Under 45 Mins</p>
                   </div>
                 </div>
               </div>

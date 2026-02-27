@@ -43,11 +43,7 @@ const Header = () => {
       <div className="hidden md:block bg-[#2d7ed6] text-white">
         <div className="max-w-[1800px] mx-auto px-6 h-11 flex items-center justify-between">
           <div className="flex items-center gap-6 text-[12px] font-bold uppercase tracking-wider">
-            <div className="flex items-center gap-2">
-              <FiClock className="text-[#f6c343] text-sm" />
-              <span>Mon - Sat: 08:00 AM - 09:00 PM</span>
-            </div>
-            <div className="w-[1px] h-4 bg-white/20"></div>
+
             <div className="flex items-center gap-2">
               <FiShield className="text-[#f6c343] text-sm" />
               <span>Professional Service Guarantee</span>

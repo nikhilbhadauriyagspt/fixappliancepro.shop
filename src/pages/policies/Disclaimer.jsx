@@ -28,9 +28,7 @@ export default function Disclaimer() {
           >
             <FiArrowLeft className="text-amber-500" /> Back to Home
           </Link>
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-white border border-slate-100 rounded-2xl text-amber-500 mb-8 shadow-sm">
-            <FiAlertTriangle size={32} />
-          </div>
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-8 leading-tight tracking-tighter">
             Legal <span className="text-amber-500 underline decoration-slate-200 underline-offset-8 italic">Disclaimer.</span>
           </h1>

@@ -66,7 +66,7 @@ const Contact = () => {
             With Your <span className="text-[#2d7ed6]">Next Fix.</span>
           </h1>
           <p className="text-white/60 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
-            Send us a message or email our support desk. Our professional local team will get back to you in under 2 hours.
+            Send us a message or email our support desk. Our professional local team will get back to you in under 45 Minutes.
           </p>
         </div>
       </section>
@@ -117,7 +117,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-[#0b1220] font-extrabold text-lg mb-2">Fast Response Time</p>
-                  <p className="text-slate-500 font-medium">We aim to respond to all inquiries within 2 hours during business hours.</p>
+                  <p className="text-slate-500 font-medium">We aim to respond to all inquiries within 45 Minutes during business hours.</p>
                 </div>
               </div>
             </div>

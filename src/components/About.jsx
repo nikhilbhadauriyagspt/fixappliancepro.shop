@@ -41,7 +41,7 @@ const About = () => {
               </h2>
 
               <p className="text-slate-500 text-lg leading-relaxed font-medium">
-                Fixing things shouldn't be a headache. We started as a small local shop to provide honest, quality repairs with a focus on your convenience and long-term results. Our goal is to extend the life of your appliances with expert care.
+                Fixing Appliance shouldn't be a headache. We started as a small local shop to provide honest, quality repairs with a focus on your convenience and long-term results. Our goal is to extend the life of your appliances with expert care.
               </p>
             </div>
 
