@@ -11,9 +11,9 @@ export default function TermsOfService() {
   return (
     <div className="bg-white min-h-screen font-sans overflow-x-hidden">
       <Helmet>
-        <title>Terms of Service | Mister Appliance - Legal Agreement</title>
-        <meta name="description" content="Read the legal terms and conditions for using Mister Appliance's services and website." />
-        <link rel="canonical" href="https://misterappliance.shop/terms-of-service" />
+        <title>Terms of Service | Fix Appliancepro - Legal Agreement</title>
+        <meta name="description" content="Read the legal terms and conditions for using Fix Appliancepro's services and website." />
+        <link rel="canonical" href="https://fixappliancepro.shop/terms-of-service" />
       </Helmet>
 
       {/* Page Hero Section - Clean & Premium */}
@@ -22,14 +22,14 @@ export default function TermsOfService() {
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
         <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-amber-50 text-amber-600 text-[10px] font-bold uppercase tracking-widest hover:bg-amber-100 transition-all shadow-sm"
           >
             <FiArrowLeft className="text-amber-500" /> Back to Home
           </Link>
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white border border-slate-100 rounded-2xl text-amber-500 mb-8 shadow-sm">
-             <FiFileText size={32} />
+            <FiFileText size={32} />
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-8 leading-tight tracking-tighter">
             Terms of <span className="text-amber-500 underline decoration-slate-200 underline-offset-8 italic">Service.</span>
@@ -45,23 +45,23 @@ export default function TermsOfService() {
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-600 font-medium leading-relaxed space-y-12 prose-headings:text-slate-900 prose-headings:font-bold prose-headings:tracking-tight prose-strong:text-slate-900 prose-a:text-amber-600">
-              
+
               <section className="bg-slate-50 p-8 md:p-12 rounded-[2.5rem] border border-slate-100 shadow-sm text-slate-600">
                 <h2 className="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-wider">Agreement to our Legal Terms</h2>
                 <p>
-                  We are Mister Appliance ("<strong>Company</strong>," "<strong>we</strong>," "<strong>us</strong>," "<strong>our</strong>"), a company registered in South Carolina, United States at West Ashley, Charleston, SC, USA.
+                  We are Fix Appliancepro ("<strong>Company</strong>," "<strong>we</strong>," "<strong>us</strong>," "<strong>our</strong>"), a company registered in Illinois, United States at 128 W Lake St, Addison, IL 60101, USA.
                 </p>
                 <p>
-                  We operate the website <a href="https://misterappliance.shop/">https://misterappliance.shop/</a> (the "<strong>Site</strong>"), as well as any other related products and services that refer or link to these legal terms (the "<strong>Legal Terms</strong>") (collectively, the "<strong>Services</strong>").
+                  We operate the website <a href="https://fixappliancepro.shop/">https://fixappliancepro.shop/</a> (the "<strong>Site</strong>"), as well as any other related products and services that refer or link to these legal terms (the "<strong>Legal Terms</strong>") (collectively, the "<strong>Services</strong>").
                 </p>
                 <p>
-                  Mister Appliance was founded on the principle that household repairs should be handled with the same level of precision as industrial maintenance. We recognize that modern appliances are complex electronic systems that require specialized knowledge and calibrated tools for effective servicing.
+                  Fix Appliancepro was founded on the principle that household repairs should be handled with the same level of precision as industrial maintenance. We recognize that modern appliances are complex electronic systems that require specialized knowledge and calibrated tools for effective servicing.
                 </p>
                 <p>
-                  You can contact us by email at <a href="mailto:info@misterappliance.shop">info@misterappliance.shop</a>, or by mail to West Ashley, Charleston, SC, USA.
+                  You can contact us by email at <a href="mailto:info@fixappliancepro.shop">info@fixappliancepro.shop</a>, or by mail to 128 W Lake St, Addison, IL 60101, USA.
                 </p>
                 <p>
-                  These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and Mister Appliance, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</strong>
+                  These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and Fix Appliancepro, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</strong>
                 </p>
                 <p>Supplemental terms and conditions or documents that may be posted on the Services from time to time are hereby expressly incorporated herein by reference. We reserve the right, in our sole discretion, to make changes or modifications to these Legal Terms at any time and for any reason. We will alert you about any changes by updating the "Last updated" date of these Legal Terms, and you waive any right to receive specific notice of each such change. It is your responsibility to periodically review these Legal Terms to stay informed of updates. You will be subject to, and will be deemed to have been made aware of and to have accepted, the changes in any revised Legal Terms by your continued use of the Services after the date such revised Legal Terms are posted.</p>
                 <p>The Services are intended for users who are at least 18 years old. Persons under the age of 18 are not permitted to use or register for the Services.</p>
@@ -107,12 +107,12 @@ export default function TermsOfService() {
                 <p>We are the owner or the licensee of all intellectual property rights in our Services, including all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics in the Services (collectively, the "Content"), as well as the trademarks, service marks, and logos contained therein (the "Marks").</p>
                 <p>Our Content and Marks are protected by copyright and trademark laws (and various other intellectual property rights and unfair competition laws) and treaties in the United States and around the world.</p>
                 <p>The Content and Marks are provided in or through the Services "AS IS" for your personal, non-commercial use or internal business purpose only.</p>
-                
+
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Your use of our Services</h3>
                 <p>Subject to your compliance with these Legal Terms, including the "PROHIBITED ACTIVITIES" section below, we grant you a non-exclusive, non-transferable, revocable license to: (1) access the Services; and (2) download or print a copy of any portion of the Content to which you have properly gained access, solely for your personal, non-commercial use or internal business purpose.</p>
                 <p>Except as set out in this section or elsewhere in our Legal Terms, no part of the Services and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission.</p>
-                <p>If you wish to make any use of the Services, Content, or Marks other than as set out in this section or elsewhere in our Legal Terms, please address your request to: <strong>info@misterappliance.shop</strong>. If we ever grant you the permission to post, reproduce, or publicly display any part of our Services or Content, you must identify us as the owners or licensors of the Services, Content, or Marks and ensure that any copyright or proprietary notice appears or is visible on posting, reproducing, or displaying our Content.</p>
-                
+                <p>If you wish to make any use of the Services, Content, or Marks other than as set out in this section or elsewhere in our Legal Terms, please address your request to: <strong>info@fixappliancepro.shop</strong>. If we ever grant you the permission to post, reproduce, or publicly display any part of our Services or Content, you must identify us as the owners or licensors of the Services, Content, or Marks and ensure that any copyright or proprietary notice appears or is visible on posting, reproducing, or displaying our Content.</p>
+
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Your submissions</h3>
                 <p>Please review this section and the "PROHIBITED ACTIVITIES" section carefully prior to using our Services to understand the (a) rights you give us and (b) obligations you have when you post or upload any content through the Services.</p>
                 <p><strong>Submissions:</strong> By directly sending us any question, comment, suggestion, idea, feedback, or other information about the Services ("Submissions"), you agree to assign to us all intellectual property rights in such Submission. You agree that we shall own this Submission and be entitled to its unrestricted use and dissemination for any lawful purpose, commercial or otherwise, without acknowledgment or compensation to you.</p>
@@ -183,7 +183,7 @@ export default function TermsOfService() {
 
               <section id="privacy">
                 <h2 className="text-3xl font-bold text-slate-900 mb-6 uppercase tracking-wider">8. PRIVACY POLICY</h2>
-                <p>We care about data privacy and security. Please review our Privacy Policy: <a href="https://misterappliance.shop/privacy-policy">https://misterappliance.shop/privacy-policy</a>. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms. Please be advised the Services is hosted in the United States. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Services, you are transferring your data to the United States, and you expressly consent to have your data transferred to and processed in the United States.</p>
+                <p>We care about data privacy and security. Please review our Privacy Policy: <a href="https://fixappliancepro.shop/privacy-policy">https://fixappliancepro.shop/privacy-policy</a>. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms. Please be advised the Services is hosted in the United States. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Services, you are transferring your data to the United States, and you expressly consent to have your data transferred to and processed in the United States.</p>
               </section>
 
               <section id="termination">
@@ -260,7 +260,7 @@ export default function TermsOfService() {
                       </div>
                       <div>
                         <p className="text-slate-400 text-sm font-bold uppercase tracking-wider m-0">Company</p>
-                        <p className="font-bold text-lg m-0 text-white">Mister Appliance</p>
+                        <p className="font-bold text-lg m-0 text-white">Fix Appliancepro</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
@@ -269,7 +269,7 @@ export default function TermsOfService() {
                       </div>
                       <div>
                         <p className="text-slate-400 text-sm font-bold uppercase tracking-wider m-0">Email</p>
-                        <p className="font-bold text-lg m-0 text-white">info@misterappliance.shop</p>
+                        <p className="font-bold text-lg m-0 text-white">info@fixappliancepro.shop</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -278,7 +278,7 @@ export default function TermsOfService() {
                       </div>
                       <div>
                         <p className="text-slate-400 text-sm font-bold uppercase tracking-wider m-0">Address</p>
-                        <p className="font-bold text-lg m-0 text-white">West Ashley, Charleston, SC, USA</p>
+                        <p className="font-bold text-lg m-0 text-white">128 W Lake St, Addison, IL 60101, USA</p>
                       </div>
                     </div>
                   </div>

@@ -29,7 +29,7 @@ const ProjectDetails = () => {
   return (
     <div className="min-h-screen bg-white font-sans overflow-x-hidden">
       <Helmet>
-        <title>{project.title} | Success Story | Mister Appliance</title>
+        <title>{project.title} | Success Story | Fix Appliancepro</title>
         <meta name="description" content={project.description || project.title} />
       </Helmet>
 
@@ -40,8 +40,8 @@ const ProjectDetails = () => {
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-600/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
         <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
-          <Link 
-            to="/projects" 
+          <Link
+            to="/projects"
             className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition-all"
           >
             <FiArrowLeft className="text-indigo-400" /> Back to Portfolio
@@ -59,14 +59,14 @@ const ProjectDetails = () => {
       <section className="py-24 bg-white relative z-20">
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
           <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
-            
+
             {/* Left side: Narrative */}
             <div className="lg:col-span-8">
               <div className="relative rounded-[2.5rem] overflow-hidden mb-16 shadow-2xl border-8 border-slate-50">
-                <img 
-                  src={project.img} 
-                  alt={project.title} 
-                  className="w-full h-auto object-cover max-h-[600px] transform hover:scale-105 transition-transform duration-1000" 
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full h-auto object-cover max-h-[600px] transform hover:scale-105 transition-transform duration-1000"
                 />
               </div>
 
@@ -110,9 +110,9 @@ const ProjectDetails = () => {
               <div className="sticky top-32 space-y-8">
                 <div className="bg-slate-900 rounded-[3rem] p-10 relative overflow-hidden shadow-2xl">
                   <div className="absolute -top-24 -right-24 w-64 h-64 bg-indigo-600/20 blur-[80px] rounded-full"></div>
-                  
+
                   <h3 className="text-2xl font-black text-white mb-10 tracking-tight relative z-10">Quick Details</h3>
-                  
+
                   <div className="space-y-8 relative z-10">
                     {[
                       { icon: <FiUser />, label: "Client Type", val: project.client || "Home Owner" },
@@ -134,8 +134,8 @@ const ProjectDetails = () => {
 
                   <div className="mt-12 pt-10 border-t border-white/10 relative z-10">
                     <p className="text-slate-400 font-medium mb-8">Need this kind of help?</p>
-                    <Link 
-                      to="/contact" 
+                    <Link
+                      to="/contact"
                       className="w-full bg-indigo-600 text-white py-5 rounded-2xl font-black uppercase tracking-widest text-[11px] flex items-center justify-center gap-3 hover:bg-white hover:text-slate-900 transition-all shadow-xl shadow-indigo-600/20 active:scale-95"
                     >
                       Talk to Us <FiArrowRight />

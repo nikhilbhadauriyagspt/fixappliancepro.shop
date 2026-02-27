@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-white font-sans overflow-x-hidden">
       <Helmet>
-        <title>Our Projects | Success Stories | Mister Appliance</title>
+        <title>Our Projects | Success Stories | Fix Appliancepro</title>
         <meta name="description" content="Explore our portfolio of successful appliance repair projects. See how we've helped homeowners fix their essential machines." />
       </Helmet>
 
@@ -41,8 +41,8 @@ const Projects = () => {
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectsData.map((project, index) => (
-              <Link 
-                key={project.id} 
+              <Link
+                key={project.id}
                 to={`/project/${project.id}`}
                 className="group relative bg-slate-50 rounded-[2.5rem] overflow-hidden p-8 flex flex-col justify-between min-h-[420px] transition-all duration-500 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-2 border border-transparent hover:border-slate-100"
               >

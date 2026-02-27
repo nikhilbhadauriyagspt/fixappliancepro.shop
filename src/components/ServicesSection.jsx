@@ -1,97 +1,115 @@
 import React from 'react';
 import { servicesData } from '../data/services';
 import { Link } from 'react-router-dom';
-import { FiArrowRight, FiCheckCircle } from 'react-icons/fi';
-import { PiWrenchLight, PiShieldCheckLight, PiClockLight } from 'react-icons/pi';
+import { FiArrowRight } from 'react-icons/fi';
+import { PiWrenchFill } from 'react-icons/pi';
+import { useBooking } from '../context/BookingContext';
 
 const ServicesSection = () => {
+  const { openBookingModal } = useBooking();
+
   return (
-    <section className="py-20 lg:py-28 bg-slate-50/50 font-sans" id="services">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20">
+    <section className="py-24 lg:py-32 bg-[#f8fafc]" id="services">
+      <div className="max-w-[1800px] mx-auto px-5 md:px-8">
         
-        {/* Clean & Light Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8">
-          <div className="max-w-2xl">
-            <span className="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 font-bold text-[10px] uppercase tracking-[0.2em] rounded-full mb-6">
-              Our service expertise
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="w-12 h-[2px] bg-[#f6c343]"></span>
+            <span className="text-[#2d7ed6] font-extrabold text-[12px] uppercase tracking-[0.35em]">
+              Professional Solutions
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tight">
-              We provide reliable repairs <br/>
-              for your essential appliances.
-            </h2>
+            <span className="w-12 h-[2px] bg-[#f6c343]"></span>
           </div>
-          <div className="pb-2">
-            <p className="text-slate-500 font-medium text-lg max-w-sm leading-relaxed">
-              From kitchen gadgets to laundry systems, our experts handle it all with care and precision.
-            </p>
-          </div>
+          <h2 className="text-3xl md:text-[50px] font-extrabold text-[#0b1220] leading-tight tracking-tight mb-6">
+            Our Premium <span className="text-[#2d7ed6]">Repair Services</span>
+          </h2>
+          <p className="text-slate-500 font-medium text-lg leading-relaxed">
+            From kitchen gadgets to laundry systems, our experts handle every appliance with care and precision to restore your home's comfort.
+          </p>
         </div>
 
-        {/* Clean 3-Column Service Grid - Not Heavy */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {servicesData.map((service, index) => (
             <Link 
               key={service.id}
               to={`/service/${service.slug}`}
-              className="group bg-white rounded-[2rem] p-8 border border-slate-100 transition-all duration-500 hover:border-amber-400 hover:shadow-2xl hover:shadow-slate-200/50 flex flex-col h-full"
+              className="group bg-white rounded-[32px] p-10 border border-slate-100 transition-all duration-500 hover:border-[#2d7ed6] hover:shadow-2xl hover:shadow-[#2d7ed6]/10 flex flex-col h-full relative overflow-hidden"
             >
+              {/* Hover background effect */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#2d7ed6]/5 rounded-full -mr-16 -mt-16 group-hover:scale-[3] transition-transform duration-700"></div>
+
               {/* Service Icon Box */}
-              <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-amber-400 group-hover:text-black transition-all duration-500 mb-8 shadow-sm group-hover:shadow-amber-400/20">
-                 <PiWrenchLight size={28} />
+              <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#f8fafc] flex items-center justify-center text-[#2d7ed6] group-hover:bg-[#2d7ed6] group-hover:text-white transition-all duration-500 mb-8 shadow-sm">
+                 <PiWrenchFill size={32} />
               </div>
 
               {/* Service Content */}
-              <div className="flex-1 space-y-4">
-                <h3 className="text-xl font-bold text-slate-900 group-hover:text-amber-600 transition-colors capitalize">
+              <div className="relative z-10 flex-1">
+                <h3 className="text-2xl font-extrabold text-[#0b1220] group-hover:text-[#2d7ed6] transition-colors mb-4">
                   {service.title}
                 </h3>
-                <p className="text-[15px] text-slate-500 font-medium leading-relaxed line-clamp-2">
+                <p className="text-[16px] text-slate-500 font-medium leading-relaxed line-clamp-3 mb-6">
                   {service.shortDesc}
                 </p>
-                
-                {/* Feature Tags */}
-                <div className="flex flex-wrap gap-2 pt-2">
-                   <span className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-slate-400">
-                      <FiCheckCircle className="text-amber-500" /> Genuine Parts
-                   </span>
-                   <span className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-slate-400">
-                      <FiCheckCircle className="text-amber-500" /> Warranty
-                   </span>
-                </div>
               </div>
 
               {/* View More Link */}
-              <div className="mt-10 pt-6 border-t border-slate-50 flex items-center justify-between text-slate-900 font-bold group-hover:text-amber-600 transition-all">
-                 <span className="text-sm border-b-2 border-transparent group-hover:border-amber-400 transition-all pb-0.5">
-                   View service details
+              <div className="relative z-10 mt-4 pt-6 border-t border-slate-50 flex items-center justify-between text-[#0b1220] font-extrabold group-hover:text-[#2d7ed6] transition-all">
+                 <span className="text-sm uppercase tracking-wider">
+                   View Service Details
                  </span>
-                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+                 <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-[#2d7ed6] group-hover:text-white group-hover:border-[#2d7ed6] transition-all">
+                   <FiArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                 </div>
               </div>
             </Link>
           ))}
         </div>
 
-        {/* Simple & Light Call to Action */}
-        <div className="mt-20 p-10 md:p-16 bg-slate-900 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between gap-10 overflow-hidden relative">
-           {/* Decorative Background Glow */}
-           <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-[80px]"></div>
-           <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px]"></div>
+        {/* View All Button */}
+        <div className="mt-16 text-center">
+           <Link 
+             to="/services"
+             className="inline-flex items-center gap-3 text-[#0b1220] font-extrabold text-lg hover:text-[#2d7ed6] transition-all group"
+           >
+             <span>Explore All Services</span>
+             <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
+           </Link>
+        </div>
+
+        {/* Special Banner CTA */}
+        <div className="mt-24 p-12 md:p-20 bg-[#06162f] rounded-[48px] flex flex-col md:flex-row items-center justify-between gap-12 overflow-hidden relative shadow-2xl">
+           <div className="absolute top-0 right-0 w-96 h-96 bg-[#2d7ed6]/20 rounded-full blur-[100px]"></div>
+           <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#f6c343]/10 rounded-full blur-[100px]"></div>
            
-           <div className="relative z-10 text-center md:text-left space-y-4">
-              <h3 className="text-3xl font-bold text-white tracking-tight leading-tight">
-                 Need help with <br className="hidden md:block" /> a different appliance?
+           <div className="relative z-10 text-center md:text-left">
+              <span className="text-[#f6c343] font-extrabold text-[12px] uppercase tracking-[0.4em] mb-4 block">
+                24/7 Priority Support
+              </span>
+              <h3 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                 Need Urgent <br className="hidden md:block" /> Appliance Repair?
               </h3>
-              <p className="text-slate-400 font-medium text-lg">
-                 We fix almost any household device. Just ask us!
+              <p className="text-white/60 font-medium text-lg mt-4 max-w-lg">
+                 Don't wait! Our expert technicians are ready to restore your appliance to perfect condition.
               </p>
            </div>
            
-           <Link 
-             to="/contact" 
-             className="relative z-10 px-10 py-5 bg-amber-400 text-black font-black uppercase tracking-widest text-[12px] rounded-2xl hover:bg-white transition-all shadow-xl active:scale-95"
-           >
-             Message our team
-           </Link>
+           <div className="relative z-10 flex flex-col sm:flex-row gap-5">
+             <button 
+               onClick={() => openBookingModal()}
+               className="px-12 py-5 bg-[#f6c343] text-[#0b1220] font-extrabold uppercase tracking-[0.1em] text-[14px] rounded-full hover:bg-white transition-all shadow-2xl transform hover:scale-105 active:scale-95"
+             >
+               Book Service Now
+             </button>
+             <Link 
+               to="/contact" 
+               className="px-12 py-5 bg-white/10 text-white font-extrabold uppercase tracking-[0.1em] text-[14px] rounded-full border border-white/20 hover:bg-white hover:text-[#0b1220] transition-all transform hover:scale-105"
+             >
+               Contact Support
+             </Link>
+           </div>
         </div>
 
       </div>

@@ -11,9 +11,9 @@ export default function Disclaimer() {
   return (
     <div className="bg-white min-h-screen font-sans overflow-x-hidden">
       <Helmet>
-        <title>Disclaimer | Mister Appliance - Important Information</title>
-        <meta name="description" content="Official Disclaimer for Mister Appliance. Learn about our general, professional, and external links information policies." />
-        <link rel="canonical" href="https://misterappliance.shop/disclaimer" />
+        <title>Disclaimer | Fix Appliancepro - Important Information</title>
+        <meta name="description" content="Official Disclaimer for Fix Appliancepro. Learn about our general, professional, and external links information policies." />
+        <link rel="canonical" href="https://fixappliancepro.shop/disclaimer" />
       </Helmet>
 
       {/* Page Hero Section - Clean & Premium */}
@@ -22,14 +22,14 @@ export default function Disclaimer() {
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
         <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-amber-50 text-amber-600 text-[10px] font-bold uppercase tracking-widest hover:bg-amber-100 transition-all shadow-sm"
           >
             <FiArrowLeft className="text-amber-500" /> Back to Home
           </Link>
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white border border-slate-100 rounded-2xl text-amber-500 mb-8 shadow-sm">
-             <FiAlertTriangle size={32} />
+            <FiAlertTriangle size={32} />
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-8 leading-tight tracking-tighter">
             Legal <span className="text-amber-500 underline decoration-slate-200 underline-offset-8 italic">Disclaimer.</span>
@@ -45,7 +45,7 @@ export default function Disclaimer() {
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none text-slate-600 font-medium leading-relaxed space-y-12 prose-headings:text-slate-900 prose-headings:font-bold prose-headings:tracking-tight prose-strong:text-slate-900 prose-a:text-amber-600">
-              
+
               <section className="bg-slate-50 p-8 md:p-12 rounded-[2.5rem] border border-slate-100 shadow-sm text-slate-600">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600">
@@ -54,7 +54,7 @@ export default function Disclaimer() {
                   <h2 className="text-3xl font-bold text-slate-900 uppercase tracking-wider m-0">General Disclaimer</h2>
                 </div>
                 <p>
-                  The information provided by <strong>Mister Appliance</strong> ("we," "us," or "our") on <a href="https://misterappliance.shop" className="text-amber-600 font-bold hover:underline">https://misterappliance.shop</a> (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.
+                  The information provided by <strong>Fix Appliancepro</strong> ("we," "us," or "our") on <a href="https://fixappliancepro.shop" className="text-amber-600 font-bold hover:underline">https://fixappliancepro.shop</a> (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.
                 </p>
               </section>
 
@@ -90,7 +90,7 @@ export default function Disclaimer() {
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-amber-400">
                     <FiAlertTriangle />
                   </div>
-                  <span className="font-bold text-white">Email: info@misterappliance.shop</span>
+                  <span className="font-bold text-white">Email: info@fixappliancepro.shop</span>
                 </div>
               </section>
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FiSend, FiMail, FiMapPin, FiPhone, FiCheckCircle } from 'react-icons/fi';
-import { PiEnvelopeLight, PiMapPinLight, PiClockLight, PiPhoneCallLight } from 'react-icons/pi';
+import { FiSend, FiMail, FiMapPin, FiClock } from 'react-icons/fi';
 import { API_ENDPOINTS } from '../config/api';
 
 const Contact = () => {
@@ -36,121 +35,135 @@ const Contact = () => {
       }
     } catch (error) {
       console.error("Submission error:", error);
-      setIsSubmitted(true); // Fallback
+      setIsSubmitted(true); // Fallback success for demo
     }
   };
 
   return (
     <div className="min-h-screen bg-white font-sans overflow-x-hidden">
       <Helmet>
-        <title>Contact Us | Mister Appliance - Fast & Reliable Support</title>
-        <meta name="description" content="Have a broken appliance? Get in touch with our team today. We provide quick and honest support for all your home repair needs." />
+        <title>Contact Us | Fix Appliancepro - Fast & Professional Support</title>
+        <meta name="description" content="Have a broken appliance? Get in touch with our team today. We provide quick and professional support for all your home repair needs." />
+        <link rel="canonical" href="https://fixappliancepro.shop/contact" />
       </Helmet>
 
-      {/* Clean & Light Hero Section */}
-      <section className="relative pt-44 pb-32 bg-slate-50/50 overflow-hidden text-center">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-400/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
+      {/* Hero Section */}
+      <section className="relative pt-[180px] pb-32 bg-[#06162f] overflow-hidden text-center">
+        {/* Background Decorative Blurs */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#2d7ed6]/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#f6c343]/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-50 text-amber-600 rounded-full mb-8">
-            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-            <span className="text-[10px] font-bold uppercase tracking-[4px]">Get In Touch</span>
+        <div className="max-w-[1800px] mx-auto px-5 md:px-8 relative z-10">
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <span className="w-12 h-[2px] bg-[#f6c343]"></span>
+            <span className="text-[#f6c343] font-extrabold text-[12px] uppercase tracking-[0.4em]">
+              Support Hub
+            </span>
+            <span className="w-12 h-[2px] bg-[#f6c343]"></span>
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-8 leading-tight tracking-tighter">
-            We're here to help you <br />
-            with Your <span className="text-amber-500 underline decoration-slate-200 underline-offset-8 italic">Next Fix.</span>
+          <h1 className="text-4xl md:text-6xl lg:text-[80px] font-extrabold text-white mb-10 leading-[1.1] tracking-tighter">
+            We're Here To Help <br />
+            With Your <span className="text-[#2d7ed6]">Next Fix.</span>
           </h1>
-          <p className="text-slate-500 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
-            Send us a message or email our support hub. Our friendly local team will get back to you in under 2 hours.
+          <p className="text-white/60 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
+            Send us a message or email our support desk. Our professional local team will get back to you in under 2 hours.
           </p>
         </div>
       </section>
 
-      {/* Contact Form & Info Grid */}
-      <section className="py-24 bg-white relative">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20">
+      {/* Contact Form & Info Section */}
+      <section className="py-24 lg:py-32 bg-[#f8fafc] relative">
+        <div className="max-w-[1800px] mx-auto px-5 md:px-8">
           <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
 
             {/* Left Column: Info Cards */}
-            <div className="lg:col-span-5 space-y-12">
-              <div className="space-y-6">
-                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tighter">
-                  Ready to schedule <br />
-                  a specialist visit?
+            <div className="lg:col-span-5">
+              <div className="mb-12">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="w-12 h-[2px] bg-[#f6c343]"></span>
+                  <span className="text-[#2d7ed6] font-extrabold text-[12px] uppercase tracking-[0.35em]">
+                    Get In Touch
+                  </span>
+                </div>
+                <h2 className="text-3xl md:text-[50px] font-extrabold text-[#0b1220] leading-tight tracking-tight mb-8">
+                  Ready To Schedule <br />
+                  A <span className="text-[#2d7ed6]">Specialist Visit?</span>
                 </h2>
                 <p className="text-slate-500 text-lg font-medium leading-relaxed max-w-md">
-                  We know your home appliances are important. Our local team will respond to your inquiry as quickly as possible.
+                  We know your home appliances are essential. Our professional team will respond to your inquiry as quickly as possible.
                 </p>
               </div>
 
               <div className="grid gap-6">
-                {[
-                  { icon: <PiEnvelopeLight size={32} />, label: "Email support", info: "info@misterappliance.shop" },
-                  { icon: <PiMapPinLight size={32} />, label: "Service area", info: "West Ashley, Charleston, SC, USA" }
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-6 p-8 rounded-[2rem] border border-slate-50 bg-slate-50/50 group hover:border-amber-400 hover:bg-white hover:shadow-xl transition-all duration-300">
-                    <div className="w-16 h-16 rounded-2xl bg-white text-slate-400 flex items-center justify-center shadow-sm group-hover:bg-amber-400 group-hover:text-black transition-all">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-1">{item.label}</p>
-                      <p className="text-lg font-bold text-slate-900 italic tracking-tight">{item.info}</p>
-                    </div>
-                  </div>
-                ))}
+                <ContactInfoCard
+                  icon={<FiMail />}
+                  label="Email Support"
+                  value="info@fixappliancepro.shop"
+                  color="[#2d7ed6]"
+                />
+
+                <ContactInfoCard
+                  icon={<FiMapPin />}
+                  label="Our Service Area"
+                  value="128 W Lake St, Addison, IL 60101, USA"
+                  color="emerald-500"
+                />
+              </div>
+
+              {/* Extra info card */}
+              <div className="mt-10 p-8 bg-white rounded-[32px] border border-slate-100 flex items-start gap-6 shadow-sm">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-500 flex items-center justify-center flex-shrink-0">
+                  <FiClock size={24} />
+                </div>
+                <div>
+                  <p className="text-[#0b1220] font-extrabold text-lg mb-2">Fast Response Time</p>
+                  <p className="text-slate-500 font-medium">We aim to respond to all inquiries within 2 hours during business hours.</p>
+                </div>
               </div>
             </div>
 
-            {/* Right Column: Premium Form */}
-            <div className="lg:col-span-7 bg-white rounded-[3rem] p-8 md:p-12 lg:p-16 border border-slate-100 shadow-2xl shadow-slate-200/50 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-amber-50 rounded-full blur-[80px] pointer-events-none"></div>
+            {/* Right Column: Form */}
+            <div className="lg:col-span-7">
+              <div className="bg-white rounded-[48px] p-8 md:p-16 shadow-2xl shadow-slate-200/60 relative overflow-hidden border border-slate-100">
+                <div className="absolute top-0 right-0 w-80 h-80 bg-[#2d7ed6]/5 rounded-full blur-[100px] -z-0"></div>
 
-              {isSubmitted ? (
-                <div className="relative z-10 text-center py-20 text-slate-900">
-                  <div className="w-24 h-24 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse">
-                    <FiCheckCircle size={48} className="text-emerald-500" />
-                  </div>
-                  <h3 className="text-3xl font-bold mb-4">Message sent successfully!</h3>
-                  <p className="text-slate-500 text-lg font-medium mb-12 max-w-sm mx-auto">Thank you for reaching out. Our team is already reviewing your request and will contact you shortly.</p>
-                  <button onClick={() => setIsSubmitted(false)} className="bg-slate-900 text-white px-12 py-5 rounded-2xl font-bold text-sm tracking-wide hover:bg-amber-400 hover:text-black transition-all shadow-xl active:scale-95">Send Another</button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="space-y-3">
-                      <label className="text-slate-600 text-[11px] font-bold uppercase tracking-widest ml-2">Full name</label>
-                      <input name="name" required onChange={handleChange} type="text" placeholder="Jane Doe" className="w-full bg-slate-50 border border-slate-100 outline-none rounded-2xl px-6 py-5 text-slate-900 font-medium focus:border-amber-400 focus:bg-white transition-all shadow-sm" />
+                {isSubmitted ? (
+                  <div className="relative z-10 text-center py-20">
+                    <div className="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner">
+                      <FiSend size={40} />
                     </div>
-                    <div className="space-y-3">
-                      <label className="text-slate-600 text-[11px] font-bold uppercase tracking-widest ml-2">Email address</label>
-                      <input name="email" required onChange={handleChange} type="email" placeholder="jane@example.com" className="w-full bg-slate-50 border border-slate-100 outline-none rounded-2xl px-6 py-5 text-slate-900 font-medium focus:border-amber-400 focus:bg-white transition-all shadow-sm" />
-                    </div>
+                    <h3 className="text-3xl font-extrabold text-[#0b1220] mb-4">Message Sent!</h3>
+                    <p className="text-slate-500 text-lg font-medium mb-12 max-w-sm mx-auto">Thank you for reaching out. Our team is already reviewing your request and will contact you shortly.</p>
+                    <button onClick={() => setIsSubmitted(false)} className="bg-[#0b1220] text-white px-10 py-4 rounded-full font-extrabold text-sm uppercase tracking-widest hover:bg-[#2d7ed6] transition-all shadow-xl active:scale-95">Send Another Message</button>
                   </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="relative z-10 space-y-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <InputField label="Full Name" name="name" placeholder="John Doe" onChange={handleChange} required />
+                      <InputField label="Email Address" name="email" type="email" placeholder="john@example.com" onChange={handleChange} required />
+                    </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="space-y-3">
-                      <label className="text-slate-600 text-[11px] font-bold uppercase tracking-widest ml-2">Appliance issue</label>
-                      <input name="subject" required onChange={handleChange} type="text" placeholder="e.g., Fridge not cooling" className="w-full bg-slate-50 border border-slate-100 outline-none rounded-2xl px-6 py-5 text-slate-900 font-medium focus:border-amber-400 focus:bg-white transition-all shadow-sm" />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <InputField label="Phone Number" name="phone" placeholder="(555) 000-0000" onChange={handleChange} required />
+                      <InputField label="Appliance Issue" name="subject" placeholder="e.g. Fridge Not Cooling" onChange={handleChange} required />
                     </div>
+
                     <div className="space-y-3">
-                      <label className="text-slate-600 text-[11px] font-bold uppercase tracking-widest ml-2">Phone number</label>
-                      <input name="phone" required onChange={handleChange} type="text" placeholder="(555) 000-0000" className="w-full bg-slate-50 border border-slate-100 outline-none rounded-2xl px-6 py-5 text-slate-900 font-medium focus:border-amber-400 focus:bg-white transition-all shadow-sm" />
+                      <label className="text-[#0b1220] text-[12px] font-extrabold uppercase tracking-widest ml-4">How Can We Help?</label>
+                      <textarea name="message" required onChange={handleChange} placeholder="Please describe the problem you're experiencing..." rows="5" className="w-full bg-[#f8fafc] border border-slate-100 outline-none rounded-[32px] px-8 py-6 text-[#0b1220] font-medium focus:border-[#2d7ed6] focus:bg-white transition-all resize-none shadow-sm placeholder:text-slate-300"></textarea>
                     </div>
-                  </div>
 
-                  <div className="space-y-3">
-                    <label className="text-slate-600 text-[11px] font-bold uppercase tracking-widest ml-2">Your message</label>
-                    <textarea name="message" required onChange={handleChange} placeholder="Tell us about the issue..." rows="5" className="w-full bg-slate-50 border border-slate-100 outline-none rounded-[2rem] px-6 py-6 text-slate-900 font-medium focus:border-amber-400 focus:bg-white transition-all resize-none shadow-sm"></textarea>
-                  </div>
-
-                  <div className="pt-4">
-                    <button type="submit" className="w-full bg-slate-900 text-white hover:bg-amber-400 hover:text-black py-6 rounded-[2rem] font-bold text-sm tracking-widest shadow-xl shadow-slate-900/10 transition-all duration-500 flex items-center justify-center gap-3 group active:scale-95">
-                      Send message <FiSend className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </button>
-                  </div>
-                </form>
-              )}
+                    <div className="pt-4">
+                      <button type="submit" className="w-full md:w-auto bg-[#2d7ed6] text-white hover:bg-[#0b1220] px-12 py-5 rounded-full font-extrabold text-[14px] uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-4 group shadow-xl transform active:scale-95">
+                        Send Message Now
+                        <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
+                          <FiSend size={16} />
+                        </div>
+                      </button>
+                    </div>
+                  </form>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -158,5 +171,30 @@ const Contact = () => {
     </div>
   );
 };
+
+const ContactInfoCard = ({ icon, label, value, color }) => (
+  <div className="flex items-center gap-8 p-8 rounded-[32px] border border-slate-100 bg-white group hover:border-[#2d7ed6] transition-all duration-500 shadow-sm hover:shadow-2xl hover:shadow-[#2d7ed6]/5">
+    <div className={`w-16 h-16 rounded-2xl bg-[#f8fafc] text-${color} flex items-center justify-center group-hover:bg-[#2d7ed6] group-hover:text-white transition-all duration-500 shadow-sm`}>
+      {React.cloneElement(icon, { size: 28 })}
+    </div>
+    <div>
+      <p className="text-slate-400 text-[10px] font-extrabold uppercase tracking-[0.2em] mb-1">{label}</p>
+      <p className="text-[#0b1220] font-extrabold text-lg">{value}</p>
+    </div>
+  </div>
+);
+
+const InputField = ({ label, name, type = "text", placeholder, ...props }) => (
+  <div className="space-y-3">
+    <label className="text-[#0b1220] text-[12px] font-extrabold uppercase tracking-widest ml-4">{label}</label>
+    <input
+      name={name}
+      type={type}
+      placeholder={placeholder}
+      className="w-full bg-[#f8fafc] border border-slate-100 outline-none rounded-full px-8 py-4 text-[#0b1220] font-medium focus:border-[#2d7ed6] focus:bg-white transition-all placeholder:text-slate-300"
+      {...props}
+    />
+  </div>
+);
 
 export default Contact;

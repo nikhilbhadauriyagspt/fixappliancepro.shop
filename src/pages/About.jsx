@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FiArrowRight, FiCheckCircle, FiPlay, FiTarget, FiHeart, FiShield } from 'react-icons/fi';
-import { PiWrenchLight, PiShieldCheckLight, PiClockLight, PiHandHeartLight, PiUsersThreeLight, PiLightbulbLight } from 'react-icons/pi';
+import { FiArrowRight, FiShield, FiHeart, FiTarget } from 'react-icons/fi';
+import { PiWrenchFill, PiShieldCheckFill, PiClockFill, PiHandHeartFill, PiUsersThreeFill, PiLightbulbFill } from 'react-icons/pi';
 import { useBooking } from '../context/BookingContext';
 
 const About = () => {
@@ -14,114 +14,128 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white font-sans overflow-x-hidden">
       <Helmet>
-        <title>About Us | Mister Appliance - Our Mission & Team</title>
-        <meta name="description" content="Learn more about Mister Appliance. We are a dedicated local team providing honest and professional home appliance repair services." />
+        <title>About Us | Fix Appliancepro - Our Mission & Team</title>
+        <meta name="description" content="Learn more about Fix Appliancepro. We are a dedicated local team providing honest and professional home appliance repair services." />
       </Helmet>
 
-      {/* Clean & Light Hero Section */}
-      <section className="relative pt-44 pb-32 bg-slate-50/50 overflow-hidden text-center">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-400/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
+      {/* Hero Section */}
+      <section className="relative pt-[180px] pb-32 bg-[#06162f] overflow-hidden text-center">
+        {/* Background Decorative Blurs */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#2d7ed6]/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#f6c343]/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-50 text-amber-600 rounded-full mb-8">
-            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-            <span className="text-[10px] font-bold uppercase tracking-[4px]">Our Story</span>
+        <div className="max-w-[1800px] mx-auto px-5 md:px-8 relative z-10">
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <span className="w-12 h-[2px] bg-[#f6c343]"></span>
+            <span className="text-[#f6c343] font-extrabold text-[12px] uppercase tracking-[0.4em]">
+              Our Professional Story
+            </span>
+            <span className="w-12 h-[2px] bg-[#f6c343]"></span>
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-8 leading-tight tracking-tighter">
-            We're on a mission to <br />
-            make home repair <span className="text-amber-500 underline decoration-slate-200 underline-offset-8 italic">Honest.</span>
+          <h1 className="text-4xl md:text-6xl lg:text-[80px] font-extrabold text-white mb-10 leading-[1.1] tracking-tighter">
+            We're Making Home Repair <br />
+            Simple, Fast & <span className="text-[#2d7ed6]">Honest.</span>
           </h1>
-          <p className="text-slate-500 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
-            Mister Appliance was founded on a simple belief: getting your home appliances fixed shouldn't be a source of stress. We're here to provide clarity, quality, and speed.
+          <p className="text-white/60 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
+            Fix Appliancepro was founded on a simple belief: getting your home appliances fixed shouldn't be a source of stress. We're here to provide clarity, quality, and professional speed.
           </p>
         </div>
       </section>
 
-      {/* Mission & Vision - Split Layout */}
-      <section className="py-24 bg-white relative">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20">
+      {/* Mission & Vision Section */}
+      <section className="py-24 lg:py-32 bg-white relative">
+        <div className="max-w-[1800px] mx-auto px-5 md:px-8">
           <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
             <div className="relative group">
-              <div className="absolute -inset-4 bg-amber-50 rounded-[3rem] -z-10 transform -rotate-1 group-hover:rotate-0 transition-transform duration-700"></div>
-              <div className="rounded-[3rem] overflow-hidden border-8 border-white shadow-2xl relative z-10">
-                <img src="/banner/about.jpg" className="w-full h-[600px] object-cover" alt="Our Mission" />
-                <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-xl p-8 rounded-[2rem] border border-white/20 shadow-xl">
-                  <div className="flex items-center gap-5">
-                    <div className="w-16 h-16 rounded-2xl bg-amber-400 flex items-center justify-center text-black">
-                      <PiHandHeartLight size={32} />
+              <div className="absolute -inset-4 bg-[#f8fafc] rounded-[48px] -z-10 transform -rotate-2 group-hover:rotate-0 transition-transform duration-700"></div>
+              <div className="rounded-[40px] overflow-hidden border-8 border-white shadow-2xl relative z-10">
+                <img src="/banner/about.jpg" className="w-full h-[600px] md:h-[700px] object-cover transition-transform duration-1000 group-hover:scale-105" alt="Our Mission" />
+                <div className="absolute bottom-10 left-10 right-10 bg-[#06162f]/95 backdrop-blur-xl p-10 rounded-[32px] border border-white/10 shadow-2xl">
+                  <div className="flex items-center gap-6">
+                    <div className="w-16 h-16 rounded-2xl bg-[#f6c343] flex items-center justify-center text-[#0b1220] shadow-xl">
+                      <PiHandHeartFill size={32} />
                     </div>
                     <div>
-                      <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Local Promise</p>
-                      <p className="text-lg font-bold text-slate-900 italic">"Trust in every repair."</p>
+                      <p className="text-[12px] font-extrabold uppercase tracking-[0.3em] text-[#f6c343] mb-2">Our Local Promise</p>
+                      <p className="text-xl font-extrabold text-white italic">"Excellence in every repair."</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="space-y-10">
+            <div className="space-y-12">
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tighter">
-                  A small team with <br /> big values.
+                <div className="flex items-center gap-3">
+                  <span className="w-12 h-[2px] bg-[#f6c343]"></span>
+                  <span className="text-[#2d7ed6] font-extrabold text-[12px] uppercase tracking-[0.35em]">
+                    Our Values
+                  </span>
+                </div>
+                <h2 className="text-3xl md:text-[50px] font-extrabold text-[#0b1220] leading-[1.1] tracking-tighter">
+                  A Dedicated Team With <br /> <span className="text-[#2d7ed6]">Unmatched Standards.</span>
                 </h2>
                 <p className="text-slate-500 text-lg font-medium leading-relaxed">
-                  As a locally-owned business, we understand the importance of a functional home. When your fridge stops cooling or your washer leaks, it disrupts your entire life. That's why we built Mister Appliance—to be the reliable neighbor you contact when things go wrong.
-                </p>
-                <p className="text-slate-500 text-lg font-medium leading-relaxed">
-                  Our journey started with a small group of certified specialists who were tired of seeing homeowners overcharged for sub-par work. We decided to set a new standard.
+                  As a locally-owned business, we understand the importance of a functional home. When your fridge stops cooling or your washer leaks, it disrupts your entire life. That's why we built Fix Appliancepro—to be the reliable expert you contact when things go wrong.
                 </p>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-8">
                 {[
-                  { icon: <PiShieldCheckLight className="text-amber-500" />, title: "Quality First", text: "We never cut corners on parts or labor. If it's not perfect, it's not finished." },
-                  { icon: <PiClockLight className="text-blue-500" />, title: "Time Matters", text: "We value your schedule. Same-day service is our goal for every request." }
+                  { icon: <PiShieldCheckFill className="text-[#2d7ed6]" />, title: "Quality First", text: "We never cut corners on parts or labor. If it's not perfect, it's not finished." },
+                  { icon: <PiClockFill className="text-[#f6c343]" />, title: "Prompt Service", text: "We value your schedule. Same-day service is our goal for every request." }
                 ].map((item, i) => (
-                  <div key={i} className="p-8 bg-slate-50 rounded-[2rem] space-y-4 hover:bg-white hover:shadow-xl transition-all border border-transparent hover:border-slate-100 group">
-                    <div className="text-4xl group-hover:scale-110 transition-transform">{item.icon}</div>
-                    <h4 className="text-xl font-bold text-slate-900">{item.title}</h4>
-                    <p className="text-sm text-slate-500 font-medium leading-relaxed">{item.text}</p>
+                  <div key={i} className="p-10 bg-[#f8fafc] rounded-[32px] space-y-6 border border-slate-100 hover:bg-white hover:shadow-2xl transition-all duration-300 group">
+                    <div className="text-5xl group-hover:scale-110 transition-transform">{item.icon}</div>
+                    <h4 className="text-2xl font-extrabold text-[#0b1220]">{item.title}</h4>
+                    <p className="text-[15px] text-slate-500 font-medium leading-relaxed">{item.text}</p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Deep Values Section - Bento Style */}
-          <div className="space-y-16">
-            <div className="text-center max-w-2xl mx-auto space-y-4">
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tighter">The pillars of our service.</h2>
-              <p className="text-slate-500 text-lg">These aren't just words to us; they are the rules we live by every single day.</p>
+          {/* Pillars of Service */}
+          <div className="space-y-20">
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <span className="w-12 h-[2px] bg-[#f6c343]"></span>
+                <span className="text-[#2d7ed6] font-extrabold text-[12px] uppercase tracking-[0.35em]">
+                  The Pillars Of Our Success
+                </span>
+                <span className="w-12 h-[2px] bg-[#f6c343]"></span>
+              </div>
+              <h2 className="text-3xl md:text-[50px] font-extrabold text-[#0b1220] tracking-tighter mb-6">The Rules We Live By.</h2>
+              <p className="text-slate-500 text-lg font-medium">These aren't just words to us; they are the professional standards we uphold every single day.</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-10">
               {[
                 {
-                  icon: <PiUsersThreeLight />,
+                  icon: <PiUsersThreeFill />,
                   title: "Community Focused",
                   desc: "We live and work right here in your community. Every customer is a neighbor, and we treat you like one.",
-                  color: "bg-blue-50 text-blue-600"
+                  color: "bg-[#2d7ed6]/10 text-[#2d7ed6]"
                 },
                 {
-                  icon: <PiLightbulbLight />,
+                  icon: <PiLightbulbFill />,
                   title: "Diagnostic Clarity",
                   desc: "We don't guess. We use professional diagnostic tools to find the root cause and explain it to you simply.",
-                  color: "bg-amber-50 text-amber-600"
+                  color: "bg-[#f6c343]/10 text-[#f6c343]"
                 },
                 {
-                  icon: <PiWrenchLight />,
+                  icon: <PiWrenchFill />,
                   title: "Factory Standards",
                   desc: "Our repairs follow the exact specifications of the original manufacturer to ensure long-term reliability.",
-                  color: "bg-emerald-50 text-emerald-600"
+                  color: "bg-[#06162f]/10 text-[#0b1220]"
                 }
               ].map((val, idx) => (
-                <div key={idx} className="p-10 rounded-[2.5rem] border border-slate-100 flex flex-col items-center text-center space-y-6 hover:shadow-2xl hover:shadow-slate-100 transition-all group">
-                  <div className={`w-20 h-20 rounded-3xl ${val.color} flex items-center justify-center text-4xl group-hover:rotate-6 transition-transform`}>
+                <div key={idx} className="p-12 rounded-[40px] border border-slate-100 bg-white flex flex-col items-center text-center space-y-8 hover:shadow-2xl hover:shadow-[#2d7ed6]/5 hover:-translate-y-2 transition-all duration-500 group">
+                  <div className={`w-24 h-24 rounded-[32px] ${val.color} flex items-center justify-center text-5xl group-hover:scale-110 transition-transform shadow-sm`}>
                     {val.icon}
                   </div>
-                  <h4 className="text-2xl font-bold text-slate-900">{val.title}</h4>
-                  <p className="text-slate-500 leading-relaxed font-medium">{val.desc}</p>
+                  <h4 className="text-2xl font-extrabold text-[#0b1220]">{val.title}</h4>
+                  <p className="text-slate-500 leading-relaxed font-medium text-[16px]">{val.desc}</p>
                 </div>
               ))}
             </div>
@@ -129,38 +143,38 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why We're Different - Big Banner */}
-      <section className="py-24 bg-slate-950 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-400/10 blur-[120px] rounded-full"></div>
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 text-center">
-          <div className="max-w-4xl mx-auto space-y-12">
-            <h2 className="text-3xl md:text-6xl font-bold text-white tracking-tighter leading-tight">
-              A commitment to <span className="text-amber-400 italic">Excellence</span> that <br className="hidden md:block" /> never wavers.
+      {/* Vision & Mission Banner */}
+      <section className="py-24 bg-[#06162f] relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#2d7ed6]/10 blur-[120px] rounded-full"></div>
+        <div className="max-w-[1800px] mx-auto px-5 md:px-8 relative z-10">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-3xl md:text-[60px] font-extrabold text-white tracking-tighter leading-tight mb-20">
+              A Commitment To <span className="text-[#f6c343]">Excellence</span> <br className="hidden md:block" /> That Never Wavers.
             </h2>
-            <div className="grid md:grid-cols-2 gap-12 text-left">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 text-amber-400 font-bold uppercase tracking-widest text-xs">
-                  <FiTarget /> Our Vision
+            <div className="grid md:grid-cols-2 gap-16 text-left">
+              <div className="space-y-6 bg-white/5 p-10 rounded-[40px] border border-white/10 backdrop-blur-sm">
+                <div className="flex items-center gap-4 text-[#f6c343] font-extrabold uppercase tracking-widest text-[14px]">
+                  <FiTarget size={24} /> Our Vision
                 </div>
-                <p className="text-slate-400 text-lg leading-relaxed">
+                <p className="text-white/60 text-lg leading-relaxed font-medium">
                   To become the most trusted home service provider in the region by delivering unmatched technical expertise and transparent customer communication.
                 </p>
               </div>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 text-amber-400 font-bold uppercase tracking-widest text-xs">
-                  <FiHeart /> Our Mission
+              <div className="space-y-6 bg-white/5 p-10 rounded-[40px] border border-white/10 backdrop-blur-sm">
+                <div className="flex items-center gap-4 text-[#f6c343] font-extrabold uppercase tracking-widest text-[14px]">
+                  <FiHeart size={24} /> Our Mission
                 </div>
-                <p className="text-slate-400 text-lg leading-relaxed">
+                <p className="text-white/60 text-lg leading-relaxed font-medium">
                   To extend the lifecycle of your household investments through precision repairs and proactive maintenance, saving you money and reducing waste.
                 </p>
               </div>
             </div>
-            <div className="pt-10">
+            <div className="mt-20">
               <button
                 onClick={() => openBookingModal()}
-                className="px-12 py-6 bg-amber-400 text-black rounded-[2rem] font-black uppercase tracking-widest text-sm hover:bg-white transition-all shadow-2xl active:scale-95 flex items-center gap-4 mx-auto"
+                className="px-12 py-6 bg-[#f6c343] text-[#0b1220] rounded-full font-extrabold uppercase tracking-widest text-[15px] hover:bg-white transition-all shadow-2xl transform hover:scale-105 active:scale-95 flex items-center gap-4 mx-auto"
               >
-                Schedule your repair <FiArrowRight size={20} />
+                Schedule Your Repair Now <FiArrowRight size={20} />
               </button>
             </div>
           </div>
@@ -168,16 +182,15 @@ const About = () => {
       </section>
 
       {/* Trust Quote */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <div className="w-16 h-1 bg-amber-400 mx-auto rounded-full"></div>
-            <p className="text-2xl md:text-4xl font-bold text-slate-900 leading-snug italic">
+      <section className="py-32 bg-white">
+        <div className="max-w-[1800px] mx-auto px-5 md:px-8">
+          <div className="max-w-4xl mx-auto text-center space-y-10">
+            <div className="w-20 h-[4px] bg-[#f6c343] mx-auto rounded-full"></div>
+            <p className="text-2xl md:text-5xl font-extrabold text-[#0b1220] leading-[1.2] tracking-tight italic">
               "We don't just want to fix your appliance; we want to earn your trust so you never have to worry about home repairs again."
             </p>
             <div>
-              <p className="text-lg font-black text-slate-900">The Mister Appliance Team</p>
-              <p className="text-sm font-bold text-slate-400 uppercase tracking-widest"></p>
+              <p className="text-xl font-extrabold text-[#2d7ed6] uppercase tracking-wider">The Fix Appliancepro Team</p>
             </div>
           </div>
         </div>

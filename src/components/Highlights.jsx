@@ -1,88 +1,76 @@
-import React from 'react';
-import { FiShield, FiClock, FiCheck, FiArrowRight, FiSmile, FiPackage } from 'react-icons/fi';
-import { PiWrenchLight, PiShieldCheckLight, PiClockLight, PiUserCheckLight } from 'react-icons/pi';
+import React from "react";
+import { FiThumbsUp, FiClock, FiShield } from "react-icons/fi";
 
-const Highlights = () => {
-  const values = [
+export default function FeatureStrip() {
+  const items = [
     {
-      icon: <PiClockLight className="text-amber-500" />,
-      title: "On-time arrival",
-      desc: "Our specialists arrive as scheduled. We value your time and aim for same-day service whenever possible.",
-      color: "bg-amber-50"
+      title: "One Year Warrenty",
+      desc: "Aldus Corporation, which later merged Adobe Systems, ushered lorem",
+      icon: <FiShield />,
+      active: false,
     },
     {
-      icon: <PiShieldCheckLight className="text-blue-500" />,
-      title: "45-day warranty",
-      desc: "We stand by our work. Every repair comes with a simple 45-day guarantee on parts and labor.",
-      color: "bg-blue-50"
+      title: "100% Satisfaction",
+      desc: "Aldus Corporation, which later merged Adobe Systems, ushered lorem",
+      icon: <FiThumbsUp />,
+      active: true,
     },
     {
-      icon: <PiWrenchLight className="text-emerald-500" />,
-      title: "Genuine parts",
-      desc: "We use only manufacturer-approved spare parts to ensure your appliance lasts longer and runs better.",
-      color: "bg-emerald-50"
+      title: "On-Time Services",
+      desc: "Aldus Corporation, which later merged Adobe Systems, ushered lorem",
+      icon: <FiClock />,
+      active: false,
     },
-    {
-      icon: <PiUserCheckLight className="text-purple-500" />,
-      title: "Certified experts",
-      desc: "Our small team of skilled professionals is background-checked and factory-trained for all major brands.",
-      color: "bg-purple-50"
-    }
   ];
 
   return (
-    <section className="bg-white py-20 lg:py-28 relative overflow-hidden font-sans">
+    <section className="relative w-full py-16 md:py-20 overflow-hidden bg-white">
+      {/* Light blue base */}
+      <div className="absolute inset-0 bg-[#eaf4ff]" />
 
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
+      {/* Bottom curved white wave (SVG) */}
+      <svg
+        className="absolute bottom-0 left-0 w-full h-[180px] md:h-[300px]"
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        {/* White wave over blue background */}
+        <path
+          fill="#ffffff"
+          d="M0,192L60,186.7C120,181,240,171,360,170.7C480,171,600,181,720,186.7C840,192,960,192,1080,176C1200,160,1320,128,1380,112L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        />
+      </svg>
 
-        {/* Simplified Header */}
-        <div className="max-w-2xl mb-16">
-          <div className="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-widest rounded-md mb-6">
-            Our promise to you
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight mb-6">
-            Simple, reliable repair services <br />
-            for your everyday home appliances.
-          </h2>
-          <p className="text-slate-500 text-lg leading-relaxed">
-            We focus on providing honest advice and quality repairs without the hidden fees or complex processes.
-          </p>
-        </div>
-
-        {/* Clean Value Grid - Not Heavy */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-          {values.map((item, index) => (
+      {/* Content */}
+      <div className="relative z-10 max-w-[1800px] mx-auto px-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 items-center">
+          {items.map((it, idx) => (
             <div
-              key={index}
-              className="group flex flex-col items-start transition-all duration-300"
+              key={idx}
+              className={`rounded-[22px] px-7 py-6 md:px-10 md:py-8 border shadow-[0_20px_60px_rgba(0,0,0,0.08)] ${it.active
+                ? "bg-[#2d7ed6] border-transparent text-white"
+                : "bg-white border-slate-100 text-slate-900"
+                }`}
             >
-              {/* Soft Icon Box */}
-              <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform duration-500`}>
-                {item.icon}
-              </div>
+              <div className="flex items-start gap-5">
+                <div className={`text-[34px] mt-1 ${it.active ? "text-white" : "text-slate-900"}`}>
+                  {it.icon}
+                </div>
 
-              {/* Minimalist Content */}
-              <div className="space-y-3">
-                <h4 className="text-xl font-bold text-slate-900 tracking-tight">
-                  {item.title}
-                </h4>
-                <p className="text-[15px] text-slate-500 font-medium leading-relaxed">
-                  {item.desc}
-                </p>
+                <div className="min-w-0">
+                  <h3 className="text-[18px] md:text-[20px] font-extrabold leading-tight">
+                    {it.title}
+                  </h3>
+                  <p className={`mt-2 text-[13px] md:text-[14px] leading-relaxed ${it.active ? "text-white/85" : "text-slate-500"}`}>
+                    {it.desc}
+                  </p>
+                </div>
               </div>
-
-              {/* Simple Divider */}
-              <div className="mt-8 w-12 h-[2px] bg-slate-100 group-hover:w-full group-hover:bg-slate-200 transition-all duration-700"></div>
             </div>
           ))}
         </div>
-
-
-
       </div>
-
     </section>
   );
-};
-
-export default Highlights;
+}

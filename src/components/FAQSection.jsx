@@ -33,27 +33,27 @@ const FAQSection = () => {
     },
     {
       id: 5,
-      question: "Are your workers experts?",
+      question: "Are your technicians certified?",
       answer: "Yes, all our specialists are highly skilled and have years of experience. They are friendly, professional, and will treat your home with respect."
     }
   ];
 
   const AccordionItem = ({ item, isOpen, toggle }) => (
-    <div className={`border-b border-slate-100 transition-all duration-300 ${isOpen ? 'bg-amber-50/30' : ''}`}>
+    <div className={`mb-4 overflow-hidden rounded-[24px] border transition-all duration-300 ${isOpen ? 'bg-[#f8fafc] border-[#2d7ed6]/30 shadow-xl shadow-[#2d7ed6]/5' : 'bg-white border-slate-100 hover:border-slate-300'}`}>
       <button
         onClick={toggle}
-        className="flex w-full items-center justify-between py-6 px-4 md:px-8 text-left transition-all group"
+        className="flex w-full items-center justify-between py-6 px-6 md:px-8 text-left transition-all group"
       >
-        <span className={`text-lg md:text-xl font-bold transition-colors ${isOpen ? 'text-amber-600' : 'text-slate-900 group-hover:text-amber-600'}`}>
+        <span className={`text-lg md:text-xl font-extrabold transition-colors ${isOpen ? 'text-[#2d7ed6]' : 'text-[#0b1220]'}`}>
           {item.question}
         </span>
-        <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-amber-400 text-black rotate-180' : 'bg-slate-50 text-slate-400 group-hover:bg-amber-100 group-hover:text-amber-600'}`}>
-          {isOpen ? <FiMinus size={18} /> : <FiPlus size={18} />}
+        <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-[#2d7ed6] text-white rotate-180' : 'bg-[#f8fafc] text-slate-400 group-hover:bg-[#2d7ed6] group-hover:text-white'}`}>
+          {isOpen ? <FiMinus size={20} /> : <FiPlus size={20} />}
         </div>
       </button>
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-        <div className="px-4 md:px-8 pb-8">
-          <p className="text-slate-500 text-[15px] font-medium leading-relaxed max-w-3xl">
+        <div className="px-6 md:px-8 pb-8">
+          <p className="text-slate-500 text-[16px] font-medium leading-relaxed max-w-3xl">
             {item.answer}
           </p>
         </div>
@@ -62,25 +62,28 @@ const FAQSection = () => {
   );
 
   return (
-    <section className="py-20 lg:py-28 bg-white font-sans overflow-hidden" id="faq">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20">
+    <section className="py-24 lg:py-32 bg-[#f8fafc]" id="faq">
+      <div className="max-w-[1800px] mx-auto px-5 md:px-8">
 
-        {/* Clean Centered Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-6">
-          <span className="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 font-bold text-[10px] uppercase tracking-[0.2em] rounded-full">
-            Questions & answers
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tight">
-            Frequently asked questions <br/>
-            about our repair services.
+        {/* Centered Header */}
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="w-12 h-[2px] bg-[#f6c343]"></span>
+            <span className="text-[#2d7ed6] font-extrabold text-[12px] uppercase tracking-[0.35em]">
+              Help Center
+            </span>
+            <span className="w-12 h-[2px] bg-[#f6c343]"></span>
+          </div>
+          <h2 className="text-3xl md:text-[50px] font-extrabold text-[#0b1220] leading-tight tracking-tight mb-6">
+            Frequently Asked <span className="text-[#2d7ed6]">Questions.</span>
           </h2>
-          <p className="text-slate-500 text-lg font-medium">
-            Find quick answers to common questions. If you need more help, just ask!
+          <p className="text-slate-500 font-medium text-lg">
+            Find quick answers to common questions about our professional repair services.
           </p>
         </div>
 
-        {/* Clean Accordion List */}
-        <div className="max-w-3xl mx-auto border-t border-slate-100">
+        {/* Accordion List */}
+        <div className="max-w-4xl mx-auto">
           {faqs.map((faq) => (
             <AccordionItem
               key={faq.id}
@@ -92,14 +95,20 @@ const FAQSection = () => {
         </div>
 
         {/* Bottom Help Trigger */}
-        <div className="mt-20 max-w-3xl mx-auto text-center">
-           <div className="inline-flex flex-col md:flex-row items-center gap-6 p-8 bg-slate-50 rounded-[2rem] w-full justify-between">
-              <span className="text-slate-700 font-bold">Still have questions? We're here to help.</span>
+        <div className="mt-20 max-w-4xl mx-auto">
+           <div className="flex flex-col md:flex-row items-center gap-8 p-10 bg-[#06162f] rounded-[32px] w-full justify-between shadow-2xl overflow-hidden relative">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#2d7ed6]/10 rounded-full blur-[80px]"></div>
+              
+              <div className="relative z-10 text-center md:text-left">
+                <h4 className="text-white text-2xl font-extrabold mb-2">Still Have Questions?</h4>
+                <p className="text-white/60 font-medium">We're here to help. Contact our support team for any emergency.</p>
+              </div>
+
               <Link 
                 to="/contact" 
-                className="group flex items-center gap-3 px-8 py-4 bg-white border border-slate-200 text-slate-900 rounded-xl font-bold text-sm tracking-wide hover:border-amber-400 hover:text-amber-600 transition-all shadow-sm"
+                className="relative z-10 group flex items-center gap-3 px-10 py-4 bg-[#f6c343] text-[#0b1220] rounded-full font-extrabold text-[14px] uppercase tracking-wider hover:bg-white transition-all shadow-xl active:scale-95"
               >
-                Contact support <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+                Contact Support <FiArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
            </div>
         </div>

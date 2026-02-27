@@ -3,7 +3,7 @@ export const blogsData = [
     id: 1,
     title: 'How to Keep Your AC Running Efficiently All Year Long',
     date: 'Feb 24, 2026',
-    author: 'Mister Appliance Team',
+    author: 'Fix Appliancepro Team',
     shortDesc: 'Proper maintenance not only improves cooling performance but also lowers electricity bills and extends lifespan.',
     longDesc: `
       <p>Air conditioners are no longer a luxury — they’re a necessity, especially in regions where summers are intense and humidity levels are high. Whether you use a split AC, window AC, or central cooling system, keeping it running efficiently throughout the year is essential. An efficient air conditioner not only keeps your home comfortable but also reduces electricity bills, prevents sudden breakdowns, and extends the lifespan of the unit.</p>
@@ -121,7 +121,7 @@ export const blogsData = [
     id: 2,
     title: 'Why Regular AC Maintenance Saves You Money in the Long Run',
     date: 'Feb 24, 2026',
-    author: 'Mister Appliance Team',
+    author: 'Fix Appliancepro Team',
     shortDesc: 'Regular maintenance is the key to keeping your AC efficient, reliable, and cost-effective. Skipping it leads to expensive repairs.',
     longDesc: `
       <p>Air conditioning systems are one of the biggest contributors to household energy consumption, especially in regions where summers are long and intense. While many homeowners only think about their AC when it stops working, regular maintenance is the key to keeping costs low and performance high.</p>
@@ -182,7 +182,7 @@ export const blogsData = [
     id: 3,
     title: 'The Ultimate Guide to Choosing the Right Air Conditioner',
     date: 'Feb 24, 2026',
-    author: 'Mister Appliance Team',
+    author: 'Fix Appliancepro Team',
     shortDesc: 'Choosing the right AC impacts your comfort and energy bills. This guide covers size, type, and efficiency.',
     longDesc: `
       <p>Choosing the right air conditioner is one of the most important decisions for your home or office comfort. With rising temperatures and increasing energy costs, selecting the correct AC unit can save you money, improve indoor air quality, and provide consistent cooling for years to come.</p>

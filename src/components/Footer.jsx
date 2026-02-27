@@ -27,18 +27,18 @@ const Footer = () => {
     <footer className="bg-slate-950 pt-20 pb-10 font-sans overflow-hidden border-t border-slate-900 relative">
       {/* Decorative top blur */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-1 bg-amber-500/20 blur-xl"></div>
-      
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
-        
+
+      <div className="max-w-[1800px] mx-auto px-5 md:px-8 relative z-10">
+
         {/* Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
-          
+
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-8">
             <Link to="/" className="inline-block relative z-10 group">
               <img
                 src="/logo/logo.png"
-                alt="Mister Appliance"
+                alt="Fix Appliancepro"
                 className="h-10 md:h-12 lg:h-16 object-contain brightness-0 invert"
               />
             </Link>
@@ -46,10 +46,10 @@ const Footer = () => {
               We are a dedicated local team providing honest, fast, and reliable appliance repairs. Restoring comfort to your home, one fix at a time.
             </p>
             <div className="flex items-center gap-4">
-               <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-amber-500">
-                  <PiEnvelopeLight size={24} />
-               </div>
-               <a href="mailto:info@misterappliance.shop" className="text-slate-300 font-bold hover:text-amber-400 transition-colors">info@misterappliance.shop</a>
+              <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-amber-500">
+                <PiEnvelopeLight size={24} />
+              </div>
+              <a href="mailto:info@fixappliancepro.shop" className="text-slate-300 font-bold hover:text-amber-400 transition-colors">info@fixappliancepro.shop</a>
             </div>
           </div>
 
@@ -82,8 +82,8 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            <button 
-              onClick={() => setShowAllServices(!showAllServices)} 
+            <button
+              onClick={() => setShowAllServices(!showAllServices)}
               className="text-amber-500 font-bold text-sm flex items-center gap-2 hover:text-amber-400 transition-colors mt-6"
             >
               {showAllServices ? (<>Show less <FiChevronUp /></>) : (<>View all services <FiChevronDown /></>)}
@@ -110,7 +110,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-slate-500 text-sm font-medium">
-            © {new Date().getFullYear()} Mister Appliance. All rights reserved.
+            © {new Date().getFullYear()} Fix Appliancepro. All rights reserved.
           </p>
           <div className="flex items-center gap-2 text-slate-600 text-sm font-medium">
             <PiWrenchLight className="text-amber-500" size={18} />

@@ -29,7 +29,7 @@ const BlogDetails = () => {
   return (
     <div className="min-h-screen bg-white font-sans overflow-x-hidden">
       <Helmet>
-        <title>{blog.title} | Mister Appliance Blog</title>
+        <title>{blog.title} | Fix Appliancepro Blog</title>
         <meta name="description" content={blog.excerpt || blog.title} />
       </Helmet>
 
@@ -40,8 +40,8 @@ const BlogDetails = () => {
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-600/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
         <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
-          <Link 
-            to="/blog" 
+          <Link
+            to="/blog"
             className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition-all"
           >
             <FiArrowLeft className="text-indigo-400" /> Back to Articles
@@ -49,7 +49,7 @@ const BlogDetails = () => {
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-black text-white mb-8 max-w-5xl mx-auto leading-tight tracking-tight">
             {blog.title}
           </h1>
-          
+
           <div className="flex flex-wrap justify-center items-center gap-8 text-slate-400 text-[11px] font-black uppercase tracking-[2px]">
             <div className="flex items-center gap-2">
               <FiCalendar className="text-indigo-400" /> {blog.date}
@@ -70,10 +70,10 @@ const BlogDetails = () => {
           <div className="max-w-4xl mx-auto">
             {/* Main Featured Image */}
             <div className="relative rounded-[2.5rem] overflow-hidden mb-16 shadow-2xl border-8 border-slate-50">
-              <img 
-                src={blog.image} 
-                alt={blog.title} 
-                className="w-full h-auto object-cover max-h-[600px] transform hover:scale-105 transition-transform duration-1000" 
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="w-full h-auto object-cover max-h-[600px] transform hover:scale-105 transition-transform duration-1000"
               />
             </div>
 
@@ -92,8 +92,8 @@ const BlogDetails = () => {
                   ))}
                 </div>
               </div>
-              <Link 
-                to="/blog" 
+              <Link
+                to="/blog"
                 className="group flex items-center gap-3 text-indigo-600 font-black uppercase tracking-widest text-[11px] hover:text-slate-900 transition-all"
               >
                 Read More Guides <FiArrowLeft className="group-hover:-translate-x-2 transition-transform rotate-180" />

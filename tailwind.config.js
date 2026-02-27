@@ -25,9 +25,9 @@ export default {
         dark: '#020617',
       },
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
-        heading: ['Roboto', 'sans-serif'],
-        logo: ['Roboto', 'sans-serif'],
+        sans: ['Manrope', 'sans-serif'],
+        heading: ['Manrope', 'sans-serif'],
+        logo: ['Manrope', 'sans-serif'],
       },
       boxShadow: {
         'soft': '0 20px 50px rgba(0, 0, 0, 0.03)',
