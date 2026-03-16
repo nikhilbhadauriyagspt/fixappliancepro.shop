@@ -10,6 +10,7 @@ import HowItWorksSection from '../components/HowItWorksSection';
 import BlogSection from '../components/BlogSection';
 import ContactSection from '../components/ContactSection';
 import FAQSection from '../components/FAQSection';
+import Custum from './support';
 
 const Home = () => {
   useEffect(() => {
@@ -33,6 +34,8 @@ const Home = () => {
         <meta property="og:url" content="https://fixappliancepro.shop/" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
+
+      <Custum />
       <HeroSection />
       <Highlights />
       <About />

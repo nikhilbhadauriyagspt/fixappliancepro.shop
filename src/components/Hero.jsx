@@ -135,7 +135,7 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5 w-full">
+            <div className="mt-10 flex flex-col sm:row items-center justify-center gap-5 w-full">
               <button
                 onClick={() => openBookingModal()}
                 className="w-full sm:w-auto px-10 py-4 rounded-full bg-[#f6c343] text-[#0b1220] font-bold text-[14px] shadow-lg hover:bg-white transition-all transform hover:scale-105"

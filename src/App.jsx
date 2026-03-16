@@ -31,18 +31,24 @@ import AdminDashboard from './pages/admin/AdminDashboard';
 import { BookingProvider } from './context/BookingContext';
 import BookingModal from './components/modals/BookingModal';
 import ScrollToTop from './components/ScrollToTop';
+
+import ExpertSupport from './pages/ExpertSupport';
+import Custum from './pages/support'
 import './App.css';
 
 const Layout = ({ children }) => {
   const location = useLocation();
   const isAdminPath = location.pathname.startsWith('/admin');
+  const isCustomPath = location.pathname === '/custom';
+  const isHomePath = location.pathname === '/';
+  const isExpertSupportPath = location.pathname === '/expert-support';
 
   return (
     <>
-      {!isAdminPath && <Header />}
-      {!isAdminPath && <BookingModal />}
+      {!isAdminPath && !isCustomPath && !isHomePath && !isExpertSupportPath && <Header />}
+      {!isAdminPath && !isCustomPath && <BookingModal />}
       <main>{children}</main>
-      {!isAdminPath && <Footer />}
+      {!isAdminPath && !isCustomPath && <Footer />}
     </>
   );
 };
@@ -56,7 +62,9 @@ function App() {
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/custom" element={<Custum />} />
               <Route path="/about" element={<About />} />
+              <Route path="/expert-support" element={<ExpertSupport />} />
               <Route path="/services" element={<Services />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/contact" element={<Contact />} />
